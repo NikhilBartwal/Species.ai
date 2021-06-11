@@ -6,14 +6,14 @@ from database_utils import *
 
 @st.cache
 def get_labels(category):
-    label_path = f'Project/app/src/main/assets/{category}_labels.txt'
+    label_path = f'labels/{category}_labels.txt'
     file = open(label_path).readlines()
     labels = [data.split('\n')[0] for data in file]
     return labels
 
 @st.cache
 def load_model(category):
-    tflite_model_path = f'Project/app/src/main/assets/{category}_model.tflite'
+    tflite_model_path = f'models/{category}_model.tflite'
     interpreter = tf.lite.Interpreter(tflite_model_path)
     interpreter.allocate_tensors()
 

@@ -11,6 +11,7 @@ def display_homepage():
     uploaded_file = st.file_uploader('Please upload an image here-> ')
 
     if uploaded_file is not None:
+        st.warning('Please close the image to go back to the homepage')
         image = process_image(uploaded_file)
         category, predict_button = display_image(image)
 
@@ -38,15 +39,23 @@ def display_homepage():
                 st.subheader(':bird: 200+ Birds')
 
             st.subheader('Our mother earth has blessed us with such a huge variety \
-                    of flora and fauna')
+                    of flora and fauna. Yet, due to this vast variety, sometimes\
+                    it becomes tedious to identify them.\nWe solve exactly that! \
+                    Upload any image you want and let us take care of the rest!')
+            st.write(" ----- ")
 
 def deploy_speciesai():
-    options = ['Homepage', 'Start the App']
+    options = ['Homepage', 'Species Encyclopedia', 'About the project']
     option = display_sidebar(options)
     if option == options[0]:
         display_homepage()
     elif option == options[1]:
-        st.write('Time to upload a picture!')
+        st.write('**Species Encyclopedia coming soon!**')
+    elif option == options[2]:
+        st.write('Hey there, if you want to know more about the project or have \
+            a feature/query in mind, please open an issue at the github repo\
+            [here](https://github.com/NikhilBartwal/Species.ai)')
+        st.write('**Thank you for checking us out :heart:**')
 
 if __name__ == '__main__':
     deploy_speciesai()

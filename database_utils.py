@@ -3,7 +3,7 @@ import streamlit as st
 import sqlite3 as sql
 
 def get_cursor():
-    db_path = 'Project/app/src/main/assets/databases/species.db'
+    db_path = 'database/species.db'
     con = sql.connect(db_path)
     curr = con.cursor()
     return curr

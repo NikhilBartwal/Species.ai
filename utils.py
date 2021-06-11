@@ -29,5 +29,8 @@ def display_image(image):
 
 def display_sidebar(options):
     """Options, warnings and text to go to the sidebar."""
+    st.sidebar.warning('Please enter a valid image with jpg, jpeg or png extension')
+    st.sidebar.title('Explore the following: ')
     option = st.sidebar.selectbox('Please choose an option: ', options)
+    st.sidebar.write('(Species encyclopedia coming soon!)')
     return option
