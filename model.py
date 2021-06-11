@@ -42,13 +42,14 @@ def display_inference(species_data, labels, category, image):
     top_indices = species_data.argsort()[-3:][::-1]
     top_scores = [round(species_data[index]*100, 2) for index in top_indices]
     top_preds = [labels[index] for index in top_indices]
+    specimen_path = 'specimens/' + category + '/'
 
     st.write(" ----- ")
     pred_1_image, pred_1_info = st.beta_columns([1,2])
     info_dict_1 = get_info(top_preds[0], category)
     info_dict_1['score'] = top_scores[0]
     with pred_1_image:
-        st.image(image)
+        st.image(specimen_path + str(top_indices[0]) + '.jpeg')
     with pred_1_info:
         display_info(info_dict_1)
     with st.beta_expander('Read more...'):
@@ -58,7 +59,7 @@ def display_inference(species_data, labels, category, image):
     info_dict_2 = get_info(top_preds[1], category)
     info_dict_2['score'] = top_scores[1]
     with pred_2_image:
-        st.image(image)
+        st.image(specimen_path + str(top_indices[1]) + '.jpeg')
     with pred_2_info:
         display_info(info_dict_2)
     with st.beta_expander('Read more...'):
@@ -68,7 +69,7 @@ def display_inference(species_data, labels, category, image):
     info_dict_3 = get_info(top_preds[2], category)
     info_dict_3['score'] = top_scores[2]
     with pred_3_image:
-        st.image(image)
+        st.image(specimen_path + str(top_indices[2]) + '.jpeg')
     with pred_3_info:
         display_info(info_dict_3)
     with st.beta_expander('Read more...'):
