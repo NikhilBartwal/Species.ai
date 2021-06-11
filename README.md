@@ -1,12 +1,15 @@
 # Species.AI 
-Deep Learning based web application for identifying flowers, birds, animals and providing general trivia about them (Hosted on Streamlit).<br>
-Take a look at it here: []()
+Deep Learning based web application for identifying 350+ flowers, birds, animals and providing general trivia about them.<br>
+Checkout the live web-app here: [https://share.streamlit.io/nikhilbartwal/species.ai/SpeciesAI_webapp.py](https://share.streamlit.io/nikhilbartwal/species.ai/SpeciesAI_webapp.py)
 
 ## Table of Contents
 
 * [About the App](#about-the-app)
+* [Screenshots](#screenshots)
+* [Contents of Repo](#contents-of-repo)
 * [Installation](#installation)
-* [Technologies](#Technologies)
+* [Technologies](#technologies)
+* [Future Goals](#future-goals)
 
 ## About the App
 
@@ -39,7 +42,7 @@ Species.AI can classify around 350+ categories of various plants, flowers, anima
 
 ## Installation
 
-Use [this]() to checkout the web application and follow the on-screen instructions. 
+Use [this](https://share.streamlit.io/nikhilbartwal/species.ai/SpeciesAI_webapp.py) to checkout the web application and follow the on-screen instructions. 
 
 #### To run the Streamlit app locally
 * Fork the repository using `git clone https://github.com/NikhilBartwal/Species.ai`
@@ -60,3 +63,7 @@ Use [this]() to checkout the web application and follow the on-screen instructio
 
 * **Streamlit:** Thanks to the amazing people at Streamlit, it is now possible to create a web app completely in python! It provides many widgets like buttons, check boxes, select boxs, file uploader, side bar etc. which can all be used in tandom with each other and create wonderful applications. 
 * **SQLite3:** The SQLite3 library was used to load the database and extract the information about the necessary species.
+
+## Future Goals
+
+* To add a Species Encyclopedia, documenting the entire species catalog.
