@@ -5,11 +5,6 @@ import streamlit as st
 from model import *
 from utils import *
 
-"""
-Main script used for defining the Streamlit webapp interface and the resuling
-connections between the widgets
-"""
-
 def display_homepage():
     #Containizing the two parts of the page for stability
     welcome_container = st.beta_container()
