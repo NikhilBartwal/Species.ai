@@ -7,8 +7,8 @@ from utils import *
 
 def display_homepage():
     #Containizing the two parts of the page for stability
-    welcome_container = st.beta_container()
-    info_container = st.beta_container()
+    welcome_container = st.container()
+    info_container = st.container()
     uploaded_file = st.file_uploader('Please upload an image here-> ')
 
     #Check whether user has uploaded an image and move on to the next page
@@ -34,15 +34,15 @@ def display_homepage():
         #This part is used to display the homepage when user has not uploaded any image
         with welcome_container:
             #Splitting the space into a 2:1 ratio for better experience
-            welcome_text, app_logo = st.beta_columns([2,1])
+            welcome_text, app_logo = st.columns([2,1])
             with welcome_text:
                 st.title('Welcome to Species.AI!')
-                st.subheader('Made with :heart: by - Nikhil Bartwal')
+                st.subheader('Made with :heart: by - Nikhil, Akriti and Vyom')
             with app_logo:
                 st.image('logo.png')
 
         with info_container:
-            animals_count, flowers_count, birds_count = st.beta_columns(3)
+            animals_count, flowers_count, birds_count = st.columns(3)
 
             #Streamlit's `subheader` and`write` support complete Markdown features!
             with animals_count:
