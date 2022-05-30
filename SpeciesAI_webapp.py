@@ -37,7 +37,7 @@ def display_homepage():
             welcome_text, app_logo = st.columns([2,1])
             with welcome_text:
                 st.title('Welcome to Species.AI!')
-                st.subheader('Made with :heart: by - Nikhil, Akriti and Vyom')
+                st.subheader('Made with :heart: from fellow greenies')
             with app_logo:
                 st.image('logo.png')
 
